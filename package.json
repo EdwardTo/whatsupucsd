@@ -7,16 +7,16 @@
     "express": "^4.14.0",
     "logger": "^0.0.1",
     "express3-handlebars": "^0.5.2",
-    "node": "4.6.0"
+    "node": "0.0.0"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
-    "node": "4.6.0",
-    "npm": "2.15.9",
-    "express": "^4.14.0"
+    "node": "^6.9.1",
+    "npm": "^2.15.9",
+    "express": "^6.9.1"
   },
   "repository": {
     "type": "git",
