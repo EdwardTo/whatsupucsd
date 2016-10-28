@@ -1,0 +1,35 @@
+.topic{
+	border-radius: 50%;
+	border: 2px solid #666;
+	width: 300px;
+	height: 300px;
+	padding: 10px;
+	background: #fff;
+	text-align: center;
+	display: flex;
+	position: relative;
+}
+
+.topic .title{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.subtopic{
+	border-radius: 50%;
+	border: 2px solid #666;
+	width: 100px;
+	height: 100px;
+	padding: 10px;
+	background: #fff;
+	text-align: center;
+	display: flex;
+	align-items: center;
+}
+
+.bubble-content{
+	text-align: center;
+	width:100%;
+}

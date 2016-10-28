@@ -1,15 +1,42 @@
+<!doctype html>
 <html>
-<body>
-<h1>What's Up UCSD?</h1>
-</body>
-<body>
-  <ul>
-    <li><a href="./index"> Home </html></li>
-    <li><a href="./settings"> Settings </html></li>
-    <li><a href="./login"> Login </html></li>
-    <li><a href="./subpage1"> Parking </html></li>
-    <li><a href="./subpage2"> Overcrowding </html></li>
-
-  </ul>
-</body>
+	<head>
+		<title>What's Up UCSD?</title>	
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<script src="js/jquery-1.11.0.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+		<link rel="stylesheet" type="text/css" href="css/Bubbles.css">
+		</head>
+	<body>
+		<div class="container-fluid" align="center">
+			<h1>What's Up UCSD?</h1>
+			<div class="content">
+				{{#each topics}}
+					<div class="topic">
+						<div class="title">
+							<h3>{{title}}</h3>
+						</div>
+						{{#each subtopics}}
+							<div class="subtopic">
+								<div class="bubble-content">
+									{{title}}
+								</div>
+							</div>
+						{{/each}}
+					</div>
+				{{/each}}
+			</div>
+			<ul>
+				<li><a href="./index"> Home </a></li>
+				<li><a href="./settings"> Settings </a></li>
+				<li><a href="./login"> Login </a></li>
+				<li><a href="./subpage1"> Parking </a></li>
+				<li><a href="./subpage2"> Overcrowding </a></li>
+			</ul>
+		</div>
+	</body>
 </html>
