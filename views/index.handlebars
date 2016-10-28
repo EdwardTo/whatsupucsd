@@ -10,15 +10,24 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
 		<link rel="stylesheet" type="text/css" href="css/bubbles.css">
-		</head>
+	</head>
 	<body>
 		<div class="container-fluid" align="center">
 			<h1>What's Up UCSD?</h1>
+			<div id="table-nav-tabs">
+				<ul class="nav nav-tabs">
+					<li><a href="./index"> Home </a></li>
+					<li><a href="./settings"> Settings </a></li>
+					<li><a href="./login"> Login </a></li>
+					<li><a href="./newtopic"> Create New Topic </a></li>
+				</ul>
+			</div>
 			<div class="content">
 				{{#each topics}}
 					<div class="topic">
 						<div class="title">
-							<h3>{{title}}</h3>
+							<a href="/{{id}}">{{title}}</a>
+							<!--<h3>{{title}}</h3>-->
 						</div>
 						{{#each subtopics}}
 							<div class="subtopic">
@@ -30,13 +39,6 @@
 					</div>
 				{{/each}}
 			</div>
-			<ul>
-				<li><a href="./index"> Home </a></li>
-				<li><a href="./settings"> Settings </a></li>
-				<li><a href="./login"> Login </a></li>
-				<li><a href="./subpage1"> Parking </a></li>
-				<li><a href="./subpage2"> Overcrowding </a></li>
-			</ul>
 		</div>
 	</body>
 </html>

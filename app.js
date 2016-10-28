@@ -14,6 +14,7 @@ var login = require('./routes/login');
 var settings = require('./routes/settings');
 var subpage1 = require('./routes/subpage1');
 var subpage2 = require('./routes/subpage2');
+var newtopic = require('./routes/newtopic');
 
 // Create the server instance
 var app = express();
@@ -33,6 +34,7 @@ app.get('/login', login.view);
 app.get('/settings', settings.view);
 app.get('/subpage1', subpage1.view);
 app.get('/subpage2', subpage2.view);
+app.get('/newtopic', newtopic.view);
 
 // Start the server
 var port = process.env.PORT || PORT; // 80 for web, 5000 for development
