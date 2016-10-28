@@ -25,7 +25,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
-app.use(express.static(path.join(__dirname, 'static')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', index.view);
 app.get('/index', index.view)
