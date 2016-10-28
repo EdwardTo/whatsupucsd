@@ -4,10 +4,12 @@
 			"title" : "Parking" ,
 			"subtopics" : [
 				{
-					"title" : "It sucks!"
+					"title" : "It sucks!",
+					"nYeses" : 9249
 				},
 				{
-					"title" : "Anyone know where there's free parking?"
+					"title" : "Anyone know where there's free parking?",
+					"nYeses" : 214
 				}
 			]
 		},
@@ -15,7 +17,8 @@
 			"title" : "Mental Health",
 			"subtopics" : [
 				{
-					"title" : "It also sucks!"
+					"title" : "It also sucks!",
+					"nYeses" : 512
 				}
 			]
 		}
