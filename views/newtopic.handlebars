@@ -16,23 +16,23 @@
 	<body>
 		<h1>Create New Topic</h1>
 	</body>
-	<body>
-		<div id="table-nav-tabs">
-			<ul class="nav nav-tabs">
-				<li><a href="./index"> Home </a></li>
-				<li><a href="./settings"> Settings </a></li>
-				<li><a href="./login"> Login </a></li>
-				<li><a href="./newtopic"> Create New Topic </a></li>
-			</ul>
-		</div>
-	</body>
+		<body>
+
+			<div id="table-nav-tabs">
+				<ul class="nav nav-tabs">
+					<li><a href="./index"> Home </a></li>
+					<li><a href="./settings"> Settings </a></li>
+					<li><a href="./login"> Login </a></li>
+					<li><a href="./newtopic"> Create New Topic </a></li>
+				</ul>
+			</div>
+		</body>
 	<br><br>
-	<form action="submitted">
+	<form action="/newtopic">
 	<h3>What's bothering you?</h3>
-	<br><br>
-	Title: <input type="text" name="problem" size="100"><br>
-    Description: <br>
-    <textarea cols="50" rows="4" name="description"></textarea>
+	<br>  <input class = "well well-sm" type="text" id="problem" name="problem" size="55"><br>
+    <h5>Wanna elaborate on that?</h5> <br>
+    <textarea class = "well well-lg" cols="50" rows="4" name="description"></textarea>
     <br>
     <input type="submit" value="Submit">
 </form>
