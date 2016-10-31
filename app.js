@@ -18,6 +18,7 @@ var newtopic = require('./routes/newtopic');
 var submitted = require('./routes/submitted');
 var bodyParser = require('body-parser');
 
+
 // Create the server instance
 var app = express();
 
@@ -33,14 +34,15 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.get('/', index.view);
-app.get('/index', index.view)
+app.get('/index', index.view);
 app.get('/login', login.view);
 app.get('/settings', settings.view);
 app.get('/subpage1', subpage1.view);
 app.get('/subpage2', subpage2.view);
 app.get('/newtopic', newtopic.view);
-app.post('/newtopic', newtopic.submit);
 app.get('/submitted', submitted.view);
+app.get('/*', index.topicPath);
+app.post('/newtopic', newtopic.submit);
 
 // Start the server
 var port = process.env.PORT || PORT; // 80 for web, 5000 for development
