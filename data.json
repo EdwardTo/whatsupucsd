@@ -1,26 +1,36 @@
 {
+	"title": "root",
 	"topics": [
 		{
-			"title" : "Parking" ,
-			"id": "./subpage1",
-			"subtopics" : [
+			"title": "UCSD",
+			"topics": [
 				{
-					"title" : "It sucks!",
-					"nYeses" : 9249
+					"title" : "Parking" ,
+					"topics" : [
+						{
+							"title" : "Itsucks",
+							"nYesses" : 9249,
+							"topics" : [
+								{
+									"title" : "UCSD is trying their best...",
+									"nYesses" : 200
+								}
+							]
+						},
+						{
+							"title" : "Anyone know where there's free parking?",
+							"nYesses" : 214
+						}
+					]
 				},
 				{
-					"title" : "Anyone know where there's free parking?",
-					"nYeses" : 214
-				}
-			]
-		},
-		{
-			"title" : "Overcrowding",
-			"id": "./subpage2",
-			"subtopics" : [
-				{
-					"title" : "It also sucks!",
-					"nYeses" : 512
+					"title" : "Overcrowding",
+					"topics" : [
+						{
+							"title" : "It also sucks!",
+							"nYesses" : 512
+						}
+					]
 				}
 			]
 		}

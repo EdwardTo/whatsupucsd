@@ -30,13 +30,14 @@ app.set('view engine', 'handlebars');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', index.view);
-app.get('/index', index.view)
+app.get('/index', index.view);
 app.get('/login', login.view);
 app.get('/settings', settings.view);
 app.get('/subpage1', subpage1.view);
 app.get('/subpage2', subpage2.view);
 app.get('/newtopic', newtopic.view);
 app.get('/submitted', submitted.view);
+app.get('/*', index.topicPath);
 
 // Start the server
 var port = process.env.PORT || PORT; // 80 for web, 5000 for development

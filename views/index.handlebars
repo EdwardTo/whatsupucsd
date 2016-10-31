@@ -5,15 +5,15 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
-		<script src="js/jquery-1.11.0.js"></script>
-		<script src="js/bootstrap.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
-		<link rel="stylesheet" type="text/css" href="css/bubbles.css">
+		<script src="/js/jquery-1.11.0.js"></script>
+		<script src="/js/bootstrap.js"></script>
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.css">
+		<link rel="stylesheet" type="text/css" href="/css/bubbles.css">
 	</head>
 	<body>
 		<div class="container-fluid" align="center">
-			<h1>What's Up UCSD?</h1>
+			<h1>What's Up With{{#each currTopicParams}} {{this}}{{/each}}?</h1>
 			<div id="table-nav-tabs">
 				<ul class="nav nav-tabs">
 					<li><a href="./index"> Home </a></li>
@@ -26,13 +26,14 @@
 				{{#each topics}}
 					<div class="topic">
 						<div class="title">
-							<a href="/{{id}}">{{title}}</a>
+							<a href="{{../currTopicPath}}{{title}}"><h2>{{title}}<h2></a>
 						</div>
-						{{#each subtopics}}
+						{{#each topics}}
 							<div class="subtopic">
 								<div class="bubble-content">
 									{{title}}
 								</div>
+							<span class="badge">{{nYesses}}</span>
 							</div>
 						{{/each}}
 					</div>
