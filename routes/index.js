@@ -4,6 +4,10 @@
  */
 data = require('../data.json')
 
+exports.view = function(req, res){
+  	res.render('index', data);
+};
+
 exports.topicPath = function(req, res){
 	var topicPath = req.params[0].toString();
 	console.log("topicPath: " + topicPath);
