@@ -15,6 +15,7 @@ exports.topicPath = function(req, res){
 	topicData = getTopicData(topicParams);
 	topicData['currTopicPath'] = '/' + topicPath + '/';
 	topicData['currTopicParams'] = topicParams;
+	topicData['prevTopicPath'] = '/' + (topicParams.slice(0, -1)).join('/');
 	res.render('index', topicData);
 }
 

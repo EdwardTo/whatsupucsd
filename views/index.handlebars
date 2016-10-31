@@ -16,10 +16,11 @@
 			<h1>What's Up With{{#each currTopicParams}} {{this}}{{/each}}?</h1>
 			<div id="table-nav-tabs">
 				<ul class="nav nav-tabs">
-					<li><a href="./index"> Home </a></li>
-					<li><a href="./settings"> Settings </a></li>
-					<li><a href="./login"> Login </a></li>
-					<li><a href="./newtopic"> Create New Topic </a></li>
+					<li><a href="/"> Home </a></li>
+					<li><a href="/settings"> Settings </a></li>
+					<li><a href="/login"> Login </a></li>
+					<li><a href="/newtopic"> Create New Topic </a></li>
+					<li><a href="{{prevTopicPath}}"> Go Back </a></li>
 				</ul>
 			</div>
 			<div class="content">
