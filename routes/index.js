@@ -4,25 +4,6 @@
  */
 data = require('../data.json')
 
-exports.view = function(req, res){
-  	res.render('index', data);
-};
-
-exports.topic = function(req, res){
-	var topic = req.params.topic;
-	topicData = getSubtopicData(topicPath);
-	res.render('index', topicData);
-}
-function getSubtopicData(subtopic){
-	for(var i = 0; i < data.topics.length; i++){
-		var obj = data.topics[i];
-		if(obj.title == subtopic){
-			return obj;
-		}
-	}
-	return {};
-}
-
 exports.topicPath = function(req, res){
 	var topicPath = req.params[0].toString();
 	console.log("topicPath: " + topicPath);
