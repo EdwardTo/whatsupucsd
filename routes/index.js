@@ -43,3 +43,4 @@ function getTopicData(topicParams){
 	}
 	return {};
 }
+

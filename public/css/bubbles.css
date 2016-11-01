@@ -8,6 +8,8 @@
 	text-align: center;
 	display: flex;
 	position: relative;
+	-webkit-transition: width 1s, height 1s; /* Safari */
+    transition: width 1s, height 1s;
 }
 
 .topic .title{
@@ -28,6 +30,8 @@
 	text-align: center;
 	display: flex;
 	align-items: center;
+	-webkit-transition: width 1s, height 1s; /* Safari */
+    transition: width 1s, height 1s;
 }
 
 .subtopic .title{

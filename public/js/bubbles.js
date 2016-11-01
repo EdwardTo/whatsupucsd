@@ -2,6 +2,7 @@ var topicStartHeight = 300;
 var subtopicStartHeight = 100;
 var topicSizeDivider = 50;
 var subtopicSizeDivider = 100;
+var yesSizeModifier = 20;
 
 $(document).ready(function(){
 	
@@ -16,7 +17,13 @@ $(document).ready(function(){
 		});
 	});
 
-	$("addYes").click(function(){
+	$(".addYes").click(function(){
+		var bubble = $(this).closest(".topic");
+		var newCirc = parseInt(bubble.css("width"), 10) + yesSizeModifier;
+		bubble.css({ 'height': newCirc + "px", 'width': newCirc + "px"});
+
+		var badge = $(this).siblings(".badge");
+		badge.text(parseInt(badge.text(), 10) + 1);
 	});
 
 });
