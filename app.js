@@ -8,16 +8,13 @@ var logger = require('logger');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
+var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var login = require('./routes/login');
 var settings = require('./routes/settings');
-var subpage1 = require('./routes/subpage1');
-var subpage2 = require('./routes/subpage2');
 var newtopic = require('./routes/newtopic');
 var submitted = require('./routes/submitted');
-var bodyParser = require('body-parser');
-
 
 // Create the server instance
 var app = express();
@@ -37,8 +34,6 @@ app.get('/', index.view);
 app.get('/index', index.view);
 app.get('/login', login.view);
 app.get('/settings', settings.view);
-app.get('/subpage1', subpage1.view);
-app.get('/subpage2', subpage2.view);
 app.get('/newtopic', newtopic.view);
 app.get('/submitted', submitted.view);
 app.get('/*', index.topicPath);

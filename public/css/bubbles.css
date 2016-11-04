@@ -17,6 +17,20 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
+	width: 250px;
+}
+
+.modifier{
+	position: relative;
+	width: 50px;
+	float: left;
+	clear: none;
+}
+
+.modifier .badge{
+	position: absolute;
+	bottom: -20%;
+	left: 50%;
 }
 
 .subtopic{

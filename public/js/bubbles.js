@@ -8,7 +8,7 @@ $(document).ready(function(){
 	
 	//Vary bubble circumference by nYesses
 	$(".topic").each(function( i ) {
-		var topicCirc = (topicStartHeight + (parseInt($(this).find(".title .badge").text(), 10) / topicSizeDivider ));
+		var topicCirc = (topicStartHeight + (parseInt($(this).find(".title .modifier.important").text(), 10) / topicSizeDivider ));
 		$(this).css({ 'height': topicCirc + "px", 'width': topicCirc + "px" });
 		//Resize subtopic bubbles
 		$(this).find(".subtopic").each(function( j ){
@@ -17,12 +17,12 @@ $(document).ready(function(){
 		});
 	});
 
-	$(".addYes").click(function(){
+	$(".modifier").click(function(){
 		var bubble = $(this).closest(".topic");
 		var newCirc = parseInt(bubble.css("width"), 10) + yesSizeModifier;
 		bubble.css({ 'height': newCirc + "px", 'width': newCirc + "px"});
 
-		var badge = $(this).siblings(".badge");
+		var badge = $(this).find(".badge");
 		badge.text(parseInt(badge.text(), 10) + 1);
 	});
 

@@ -29,15 +29,33 @@
 					<div class="topic">
 						<div class="title">
 							<a href="{{../currTopicPath}}{{title}}"><h2>{{title}}<h2></a>
-							<span class="badge">{{nYesses}}</span>
-							<a class="addYes">+</a>
+							<div class="modifier important">
+								<span class="glyphicon glyphicon-plus"></span>
+								<span class="badge">{{modifiers.important}}</span>
+							</div>
+							<div class="modifier agree">
+								<span class="glyphicon glyphicon-thumbs-up"></span>
+								<span class="badge">{{modifiers.agree}}</span>
+							</div>
+							<div class="modifier disagree">
+								<span class="glyphicon glyphicon-thumbs-down"></span>
+								<span class="badge">{{modifiers.disagree}}</span>
+							</div>
+							<div class="modifier unimportant">
+								<span class="glyphicon glyphicon-remove-circle"></span>
+								<span class="badge">{{modifiers.unimportant}}</span>
+							</div>
+							<div class="modifier love">
+								<span class="glyphicon glyphicon-heart-empty"></span>
+								<span class="badge">{{modifiers.love}}</span>
+							</div>
 						</div>
 						{{#each topics}}
 							<div class="subtopic">
 								<div class="title">
 									{{title}}
 								</div>
-							<span class="badge">{{nYesses}}</span>
+							<span class="badge">{{modifiers.important}}</span>
 							</div>
 						{{/each}}
 					</div>
