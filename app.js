@@ -34,7 +34,7 @@ app.get('/', index.view);
 app.get('/index', index.view);
 app.get('/login', login.view);
 app.get('/settings', settings.view);
-app.get('/newtopic', newtopic.view);
+app.get('*/newtopic', newtopic.view);
 app.get('/submitted', submitted.view);
 app.get('/*', index.topicPath);
 app.post('/newtopic', newtopic.submit);
