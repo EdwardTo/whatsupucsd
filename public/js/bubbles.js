@@ -2,7 +2,7 @@ var topicStartHeight = 300;
 var subtopicStartHeight = 100;
 var topicSizeDivider = 50;
 var subtopicSizeDivider = 100;
-var clickSizeModifier = 20;
+var CLICKSIZEMODIFIER = 20;
 var popSize = 10000;
 
 function pop(){
@@ -28,12 +28,12 @@ $(document).ready(function(){
 		badge.text(badgeCount);
 
 		if($(this).hasClass("important")){
-			clickSizeModifier = clickSizeModifier;
+			clickSizeModifier = CLICKSIZEMODIFIER;
 			if(badgeCount >= popSize){
 				pop();
 			}
 		} else if($(this).hasClass("unimportant")){
-			clickSizeModifier = -1 * clickSizeModifier;
+			clickSizeModifier = -1 * CLICKSIZEMODIFIER;
 		} else{
 			clickSizeModifier = 0;
 		}
