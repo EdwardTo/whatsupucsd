@@ -3,11 +3,18 @@
 	"topics": [
 		{
 			"title": "UCSD",
+			"modifiers" : {
+				"important" : 11024,
+				"agree" : 123,
+				"disagree" : 532,
+				"unimportant" : 6,
+				"love" : 1002
+			},
 			"topics": [
 				{
 					"title" : "Parking" ,
 					"modifiers" : {
-						"important" : 7293,
+						"important" : 9999,
 						"agree" : 0,
 						"disagree" : 2,
 						"unimportant" : 5,
@@ -15,7 +22,7 @@
 					},
 					"topics" : [
 						{
-							"title" : "Itsucks",
+							"title" : "It sucks!",
 							"modifiers" : {
 								"important" : 1259,
 								"agree" : 0,
@@ -27,7 +34,7 @@
 								{
 									"title" : "UCSD is trying their best...",
 									"modifiers" : {
-										"important" : 1259,
+										"important" : 103,
 										"agree" : 0,
 										"disagree" : 2,
 										"unimportant" : 5,
@@ -39,7 +46,7 @@
 						{
 							"title" : "Anyone know where there's free parking?",
 							"modifiers" : {
-								"important" : 1259,
+								"important" : 923,
 								"agree" : 0,
 								"disagree" : 2,
 								"unimportant" : 5,
@@ -51,7 +58,7 @@
 				{
 					"title" : "Overcrowding",
 					"modifiers" : {
-						"important" : 1259,
+						"important" : 3284,
 						"agree" : 0,
 						"disagree" : 2,
 						"unimportant" : 5,
@@ -61,7 +68,7 @@
 						{
 							"title" : "It also sucks!",
 							"modifiers" : {
-								"important" : 1259,
+								"important" : 924,
 								"agree" : 0,
 								"disagree" : 2,
 								"unimportant" : 5,

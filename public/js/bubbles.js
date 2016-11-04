@@ -2,7 +2,12 @@ var topicStartHeight = 300;
 var subtopicStartHeight = 100;
 var topicSizeDivider = 50;
 var subtopicSizeDivider = 100;
-var yesSizeModifier = 20;
+var clickSizeModifier = 20;
+var popSize = 10000;
+
+function pop(){
+	alert("This issue has popped!  Your support has been sent to the following places: ")
+}
 
 $(document).ready(function(){
 	
@@ -18,12 +23,23 @@ $(document).ready(function(){
 	});
 
 	$(".modifier").click(function(){
-		var bubble = $(this).closest(".topic");
-		var newCirc = parseInt(bubble.css("width"), 10) + yesSizeModifier;
-		bubble.css({ 'height': newCirc + "px", 'width': newCirc + "px"});
-
 		var badge = $(this).find(".badge");
-		badge.text(parseInt(badge.text(), 10) + 1);
+		badgeCount = parseInt(badge.text(), 10) + 1;
+		badge.text(badgeCount);
+
+		if($(this).hasClass("important")){
+			clickSizeModifier = clickSizeModifier;
+			if(badgeCount >= popSize){
+				pop();
+			}
+		} else if($(this).hasClass("unimportant")){
+			clickSizeModifier = -1 * clickSizeModifier;
+		} else{
+			clickSizeModifier = 0;
+		}
+		var bubble = $(this).closest(".topic");
+		var newCirc = parseInt(bubble.css("width"), 10) + clickSizeModifier;
+		bubble.css({ 'height': newCirc + "px", 'width': newCirc + "px"});
 	});
 
 });
