@@ -46,22 +46,3 @@ function pushTopicData(topicParams, newTopic){
 	}
 return {};
 }
-
-function getTopicData(topicParams){
-	currTopicLevel = data;
-	for(var i = 0; i < topicParams.length; i++){
-		for(var j = 0; j < currTopicLevel.topics.length; j++){
-			var obj = currTopicLevel.topics[j];
-			if(obj.title == topicParams[i]){
-				if(i == (topicParams.length - 1)){
-					return obj;
-				}
-				else{
-					currTopicLevel = obj;
-					break;
-				}	
-			}
-		}
-	}
-	return {};
-}
