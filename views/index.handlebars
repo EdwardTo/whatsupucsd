@@ -18,8 +18,15 @@
 			<div class="content">
 				{{#each topics}}
 					<div class="topic">
+						<a href="{{../currTopicPath}}{{title}}">
+						<div class="bg-link">
+
+						</div>
+						</a>
 						<div class="title">
-							<a href="{{../currTopicPath}}{{title}}"><h2>{{title}}</h2></a>
+							<a href="{{../currTopicPath}}{{title}}">
+							<h2>{{title}}</h2>
+							</a>
 							<h2>
 							<div class="modifier important">
 								<span class="glyphicon glyphicon-plus"></span>

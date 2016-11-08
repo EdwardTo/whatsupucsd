@@ -8,7 +8,6 @@
 	border: 2px solid #666;
 	width: 300px;
 	height: 300px;
-	padding: 10px;
 	background: #fff;
 	text-align: center;
 	display: flex;
@@ -17,6 +16,14 @@
 	clear: none;
 	-webkit-transition: width 1s, height 1s; /* Safari */
     transition: width 1s, height 1s;
+}
+
+.topic .bg-link{
+	position: absolute;
+	z-index: 0;
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
 }
 
 .topic .title{
