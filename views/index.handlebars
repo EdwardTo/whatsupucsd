@@ -13,9 +13,9 @@
 	</head>
 	<body>
 		<div class="container-fluid" align="center">
-			<div class="page-title-bar">
+			<nav class="page-title-bar navbar navbar-fixed-top navbar-light bg-faded">
 				<h2>What's Up With{{#each currTopicParams}} {{this}}{{/each}}?</h2>
-			</div>
+			</nav>>
 			<div class="content">
 				{{#each topics}}
 					<div class="topic">
@@ -62,7 +62,7 @@
 					</div>
 				{{/each}}
 			</div>
-			<div class="button-bar">
+			<nav class="button-bar navbar-fixed-bottom navbar-light bg-light">
 				<div class="button-col">
 					<a href="{{prevTopicPath}}">
 						<div class="bubble-button">
@@ -91,7 +91,7 @@
 						</div>
 					</a>
 				</div>
-			</div>
+			</nav>
 		</div>
 	</body>
 </html>
