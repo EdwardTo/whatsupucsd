@@ -5,10 +5,6 @@ var subtopicSizeDivider = 100;
 var CLICKSIZEMODIFIER = 20;
 var popSize = 10000;
 
-function pop(){
-	alert("This issue has popped!  Your support has been sent to the following places: ")
-}
-
 $(document).ready(function(){
 	
 	//Vary bubble circumference by nYesses
@@ -22,6 +18,7 @@ $(document).ready(function(){
 		});
 	});
 
+	//On modifier click, increase bubblesize if applicable, update serverside count, then increase clientside badge on callback
 	$(".modifier").click(function(){
 		var badge = $(this).find(".badge");
 		badgeCount = parseInt(badge.text(), 10) + 1;
@@ -40,6 +37,17 @@ $(document).ready(function(){
 		var bubble = $(this).closest(".topic");
 		var newCirc = parseInt(bubble.css("width"), 10) + clickSizeModifier;
 		bubble.css({ 'height': newCirc + "px", 'width': newCirc + "px"});
-	});
 
+		modifierName = $(this).attr('class').split(/\s+/)[1];
+		topicPath = $(this).closest(".title").find("a").first().attr('href');
+		addModifierPath = "/addModifier/" + modifierName + topicPath;
+		$.get(addModifierPath, modifierCallback);
+	});
 });
+
+function modifierCallback(callbackInfo){
+}
+
+function pop(){
+	alert("This issue has popped!  Your support has been sent to the following places: ")
+}
