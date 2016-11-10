@@ -3,8 +3,7 @@
 	<head>
 		<title>What's Up UCSD?</title>	
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
 		<script src="/js/jquery-1.11.0.js"></script>
 		<script src="/js/bootstrap.js"></script>
 		<script src="/js/bubbles.js"></script>
@@ -13,12 +12,10 @@
 		<link rel="stylesheet" type="text/css" href="/css/bubbles.css">
 	</head>
 	<body>
-		<div class="container">
+		<div class="container-fluid" align="center">
 			<div class="page-title-bar">
 				<h2>What's Up With{{#each currTopicParams}} {{this}}{{/each}}?</h2>
 			</div>
-		</div>
-		<div class="container-fluid" align="center">
 			<div class="content">
 				{{#each topics}}
 					<div class="topic">
@@ -65,8 +62,6 @@
 					</div>
 				{{/each}}
 			</div>
-		</div>
-		<div class="container">
 			<div class="button-bar">
 				<div class="button-col">
 					<a href="{{prevTopicPath}}">
