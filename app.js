@@ -16,6 +16,7 @@ var settings = require('./routes/settings');
 var newtopic = require('./routes/newtopic');
 var submitted = require('./routes/submitted');
 var registration = require('./routes/registration');
+var tutorial = require('./routes/tutorial');
 
 // Create the server instance
 var app = express();
@@ -35,6 +36,7 @@ app.get('/', index.view);
 app.get('/index', index.view);
 app.get('/login', login.view);
 app.get('/registration', registration.view);
+app.get('/tutorial', tutorial.view);
 app.get('/settings', settings.view);
 app.get('/addModifier/:modifier/*', index.addModifier);
 app.get('*/newtopic', newtopic.view);
