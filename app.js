@@ -15,6 +15,7 @@ var login = require('./routes/login');
 var settings = require('./routes/settings');
 var newtopic = require('./routes/newtopic');
 var submitted = require('./routes/submitted');
+var registration = require('./routes/registration');
 
 // Create the server instance
 var app = express();
@@ -33,6 +34,7 @@ app.use(bodyParser.json());
 app.get('/', index.view);
 app.get('/index', index.view);
 app.get('/login', login.view);
+app.get('/registration', registration.view);
 app.get('/settings', settings.view);
 app.get('*/newtopic', newtopic.view);
 app.get('/submitted', submitted.view);
