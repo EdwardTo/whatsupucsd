@@ -15,9 +15,13 @@
 	<div class="container-fluid" align="center">
 		<form action="/newtopic" method="post">
 			<h3>What's bothering you?</h3>
-			<br>  <input class = "well well-sm" type="text" id="problem" name="problem" size="55"><br>
+			<br>  <input class = "well well-sm" type="text" id="problem" name="problem" style=" width:100%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;"><br>
 	    	<h5>Wanna elaborate on that?</h5> <br>
-	    	<textarea class = "well well-lg" cols="50" rows="4" name="description"></textarea>
+	    	<textarea class = "well well-lg" cols="50" rows="4" name="description" style=" width:100%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;"></textarea>
 	    	<br>
 	    	<input type="hidden" name="URL" id="path">
 	    	<input type="submit" value="Submit">
