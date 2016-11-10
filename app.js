@@ -40,7 +40,7 @@ app.get('*/newtopic', newtopic.view);
 app.get('/submitted', submitted.view);
 app.get('/*', index.topicPath);
 app.post('/newtopic', newtopic.submit);
-
+app.post('/registration', registration.submit);
 // Start the server
 var port = process.env.PORT || PORT; // 80 for web, 5000 for development
 http.createServer(app).listen(port, function() {
