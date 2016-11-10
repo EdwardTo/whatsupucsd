@@ -13,10 +13,12 @@
 		<link rel="stylesheet" type="text/css" href="/css/bubbles.css">
 	</head>
 	<body>
-		<div class="container-fluid" align="center">
+		<div class="container">
 			<div class="page-title-bar">
 				<h2>What's Up With{{#each currTopicParams}} {{this}}{{/each}}?</h2>
 			</div>
+		</div>
+		<div class="container-fluid" align="center">
 			<div class="content">
 				{{#each topics}}
 					<div class="topic">
@@ -63,6 +65,8 @@
 					</div>
 				{{/each}}
 			</div>
+		</div>
+		<div class="container">
 			<div class="button-bar">
 				<div class="button-col">
 					<a href="{{prevTopicPath}}">
