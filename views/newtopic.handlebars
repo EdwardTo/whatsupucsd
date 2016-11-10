@@ -10,22 +10,38 @@
 		<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.css">
 		<link rel="stylesheet" type="text/css" href="/css/bubbles.css">
+		<style>
+			form {
+				width:50%;
+	   			box-sizing:border-box;
+	    		-moz-box-sizing:border-box;
+			}
+		@media only screen and (max-width : 767px) {
+			form {
+				width:100%;
+    			box-sizing:border-box;
+   				-moz-box-sizing:border-box;
+   			}
+		}
+		</style>
 	</head>
 <body>
 	<div class="container-fluid" align="center">
-		<form action="/newtopic" method="post">
-			<h3>What's bothering you?</h3>
-			<br>  <input class = "well well-sm" type="text" id="problem" name="problem" style=" width:100%;
-    box-sizing:border-box;
-    -moz-box-sizing:border-box;"><br>
-	    	<h5>Wanna elaborate on that?</h5> <br>
-	    	<textarea class = "well well-lg" cols="50" rows="4" name="description" style=" width:100%;
-    box-sizing:border-box;
-    -moz-box-sizing:border-box;"></textarea>
-	    	<br>
-	    	<input type="hidden" name="URL" id="path">
-	    	<input type="submit" value="Submit">
-		</form>
+		<div style=" border-radius: 1px;  padding: 10px;">
+			<form action="/newtopic" method="post">
+				<h3>What's bothering you?</h3>
+				<br>  <input class = "well well-sm" type="text" id="problem" name="problem" style = "width:100%;
+    			box-sizing:border-box;
+   				-moz-box-sizing:border-box;"><br>
+		    	<h5>Wanna elaborate on that?</h5> <br>
+		    	<textarea class = "well well-lg" cols="50" rows="4" name="description" style = "width:100%;
+    			box-sizing:border-box;
+   				-moz-box-sizing:border-box;"></textarea>
+		    	<br>
+		    	<input type="hidden" name="URL" id="path">
+		    	<input type="submit" value="Submit">
+			</form>
+		</div>
 		 <div class="button-bar">
 			<div class="button-col">
 				<a href="{{prevTopicPath}}">
