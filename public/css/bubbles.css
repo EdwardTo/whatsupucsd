@@ -100,6 +100,7 @@
 	align-items:center;
 	clear: none;
 	float: left;
+	z-index: 2;
 }
 
 .button-bar .bubble-button{
