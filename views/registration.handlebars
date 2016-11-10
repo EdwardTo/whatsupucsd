@@ -20,16 +20,26 @@
             <div class="row">
                 <div class="col-md-offset-5 col-md-3">
                     <div class="form-login">
-                        <form action="/index">
-                            <h4>Welcome back!</h4>
-                            <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="username" required/>
+                        <form action="/registration" method = "post">
+                            <h4>Sign up for a new account!</h4>
+                            First Name:
+                            <input type="text" id="firstName" name="firstName" class="form-control input-sm chat-input" placeholder="First Name" required/>
+                            </br>            
+                            Last Name:
+                            <input type="text" id="lastName" name="lastName" class="form-control input-sm chat-input" placeholder="Last Name" required/>
+                            </br>                            
+                            Email:
+                            <input type="text" id="email" name="email" class="form-control input-sm chat-input" placeholder="Email" required/>
                             </br>
-                            <input type="text" id="userPassword" class="form-control input-sm chat-input" placeholder="password" required/>
+                            Username:
+                            <input type="text" id="userName" name="userName" class="form-control input-sm chat-input" placeholder="username" required/>
+                            </br>
+                            Password:
+                            <input type="password" id="userPassword" name="userPassword" class="form-control input-sm chat-input" placeholder="password" required/>
                             </br>
                             <div class="wrapper">
                                 <span class="group-btn">     
-                                    <button class="btn btn-primary btn-md" type="submit">Login </span></button>
-                                    <a href="/registration" class="btn btn-primary btn-md">Register </a>
+                                    <button class="btn btn-primary btn-md" type="submit">Sign up! </span></button>
                                 </span>
                             </div>
                         </form>

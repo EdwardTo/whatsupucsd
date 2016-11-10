@@ -17,6 +17,7 @@ exports.submit = function(req, res){
 	console.log("topic params: " + topicParams.toString());
 	topicParams.pop();
 	var newTopic = {title: req.body.problem, modifiers: {important: 0, agree: 0, disagree: 0, unimportant: 0, love: 0}, topics: []};
+	var user = { user: {}}
 	pushTopicData(topicParams, newTopic);
 	topicParams = topicParams.join('/');
 	res.redirect('/' + topicParams);
@@ -45,23 +46,4 @@ function pushTopicData(topicParams, newTopic){
 		}
 	}
 return {};
-}
-
-function getTopicData(topicParams){
-	currTopicLevel = data;
-	for(var i = 0; i < topicParams.length; i++){
-		for(var j = 0; j < currTopicLevel.topics.length; j++){
-			var obj = currTopicLevel.topics[j];
-			if(obj.title == topicParams[i]){
-				if(i == (topicParams.length - 1)){
-					return obj;
-				}
-				else{
-					currTopicLevel = obj;
-					break;
-				}	
-			}
-		}
-	}
-	return {};
 }
