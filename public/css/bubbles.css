@@ -43,7 +43,7 @@ html, body{
     transition: width 1s, height 1s;
 }
 
-.topic .bg-link{
+.bg-link{
 	position: absolute;
 	z-index: 0;
 	height: 100%;
@@ -78,11 +78,9 @@ html, body{
 	border: 2px solid #666;
 	width: 100px;
 	height: 100px;
-	padding: 10px;
 	background: #fff;
 	text-align: center;
 	display: flex;
-	align-items: center;
 	-webkit-transition: width 1s, height 1s; /* Safari */
     transition: width 1s, height 1s;
 }

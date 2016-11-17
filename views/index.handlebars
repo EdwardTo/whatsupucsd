@@ -12,8 +12,8 @@
 		<link rel="stylesheet" type="text/css" href="/css/bubbles.css">
 	</head>
 	<body>
-		<div class="container">
-			<nav class="page-title-bar navbar navbar-fixed-top navbar-light bg-faded">
+		<div class="container" align="center">
+			<nav class="navbar navbar-fixed-top navbar-light bg-faded">
 				<h2>What's Up With{{#each currTopicParams}} {{this}}{{/each}}?</h2>
 			</nav>
 		</div>
@@ -23,7 +23,6 @@
 					<div class="topic">
 						<a href="{{../currTopicPath}}{{title}}">
 						<div class="bg-link">
-
 						</div>
 						</a>
 						<div class="title">
@@ -55,10 +54,14 @@
 						</div>
 						{{#each topics}}
 							<div class="subtopic">
+								<a href="{{../currTopicPath}}{{../title}}/{{title}}">
+								<div class="bg-link">
+								</div>
 								<div class="title">
 									{{title}}
 								</div>
-							<span class="badge">{{modifiers.important}}</span>
+								<span class="badge">{{modifiers.important}}</span>
+								</a>
 							</div>
 						{{/each}}
 					</div>
