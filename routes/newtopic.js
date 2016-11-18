@@ -5,7 +5,7 @@
 data = require('../data.json')
 
 exports.view = function(req, res){
-	console.log(data);
+	//console.log(data);
 	var newTopic = {'title': req.query.problem, 'description': req.query.description};
   	res.render('newtopic');
 };
@@ -13,13 +13,18 @@ exports.view = function(req, res){
 exports.submit = function(req, res){
 	var topicPath = req.body.URL;
 	var topicParams = topicPath.split('/');
+	var topicTitle = req.body.problem;
+	var titleURL = escape(topicTitle);
+	console.log("topicPath: " + topicPath + " topicParams: " + topicParams.toString() + " topicTitle: " + topicTitle + " titleURL: " + titleURL);
 	topicParams.shift();
 	console.log("topic params: " + topicParams.toString());
 	topicParams.pop();
-	var newTopic = {title: req.body.problem, modifiers: {important: 0, agree: 0, disagree: 0, unimportant: 0, love: 0}, topics: []};
+	console.log("topicparams POPPED: " + topicParams);
+	var newTopic = {title: titleURL, modifiers: {important: 0, agree: 0, disagree: 0, unimportant: 0}, topics: []};
 	var user = { user: {}}
 	pushTopicData(topicParams, newTopic);
 	topicParams = topicParams.join('/');
+	//console.log("PPPPP"+topicParams);
 	res.redirect('/' + topicParams);
 };
 
@@ -34,6 +39,7 @@ function pushTopicData(topicParams, newTopic){
 				var obj = currTopicLevel.topics[j];
 				if(obj.title == topicParams[i]){
 					if(i == (topicParams.length - 1)){
+						console.log("PUSHING!!");
 						obj.topics.push(newTopic);
 						return;
 					}

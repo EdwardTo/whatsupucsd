@@ -7,8 +7,7 @@
 				"important" : 11024,
 				"agree" : 123,
 				"disagree" : 532,
-				"unimportant" : 6,
-				"love" : 1002
+				"unimportant" : 6
 			},
 			"topics": [
 				{
@@ -17,8 +16,7 @@
 						"important" : 9999,
 						"agree" : 0,
 						"disagree" : 2,
-						"unimportant" : 5,
-						"love" : 2
+						"unimportant" : 5
 					},
 					"topics" : [
 						{
@@ -27,8 +25,7 @@
 								"important" : 1259,
 								"agree" : 0,
 								"disagree" : 2,
-								"unimportant" : 5,
-								"love" : 2
+								"unimportant" : 5
 							},
 							"topics" : [
 								{
@@ -37,8 +34,7 @@
 										"important" : 103,
 										"agree" : 0,
 										"disagree" : 2,
-										"unimportant" : 5,
-										"love" : 2
+										"unimportant" : 5
 									}
 								}
 							]
@@ -49,8 +45,7 @@
 								"important" : 923,
 								"agree" : 0,
 								"disagree" : 2,
-								"unimportant" : 5,
-								"love" : 2
+								"unimportant" : 5
 							}
 						}
 					]
@@ -61,8 +56,7 @@
 						"important" : 3284,
 						"agree" : 0,
 						"disagree" : 2,
-						"unimportant" : 5,
-						"love" : 2
+						"unimportant" : 5
 					},
 					"topics" : [
 						{
@@ -71,8 +65,7 @@
 								"important" : 924,
 								"agree" : 0,
 								"disagree" : 2,
-								"unimportant" : 5,
-								"love" : 2
+								"unimportant" : 5
 							}
 						}
 					]

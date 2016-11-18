@@ -5,16 +5,23 @@
 data = require('../data.json')
 
 exports.view = function(req, res){
-	console.log(data);
-  	res.render('index', data);
+    var strData = JSON.stringify(data);
+    console.log(strData);
+    var unescData = unescape(strData);
+    var finData = JSON.parse(unescData);
+  	res.render('index', finData);
 };
 
 exports.topicPath = function(req, res){
-	var topicPath = req.params[0].toString();
+	var topicPath = escape(req.params[0].toString());
 	var topicParams = topicPath.split('/');
+	var topicParamsStr = JSON.stringify(topicParams);
+	var topicParamsUnesc = unescape(topicParamsStr);
+	var topicParamsFin = JSON.parse(topicParamsUnesc);
 	var topicData = getTopicData(topicParams);
+
 	topicData['currTopicPath'] = '/' + topicPath + '/';
-	topicData['currTopicParams'] = topicParams;
+	topicData['currTopicParams'] = topicParamsFin;
 	topicData['prevTopicPath'] = '/' + (topicParams.slice(0, -1)).join('/');
 	console.log("Getting Topic: " + topicParams.toString());
 	res.render('index', topicData);
@@ -24,7 +31,7 @@ exports.addModifier = function(req, res){
 	var modifier = req.params.modifier;
 	var topicPath = req.params[0].toString();
 	var topicParams = topicPath.split('/');
-	console.log("Adding Modifer " + modifier + " to " + topicParams.toString());
+	//console.log("Adding Modifer " + modifier + " to " + topicParams.toString());
 	var topicData = getTopicData(topicParams);
 	var topicModifiers = topicData.modifiers;
 	topicModifiers[modifier] += 1;
@@ -43,7 +50,10 @@ function getTopicData(topicParams){
 			//console.log("j=" + j + ", objtitle=" + obj.title);
 			if(obj.title == topicParams[i]){
 				if(i == (topicParams.length - 1)){
-					return obj;
+					var ob1 = JSON.stringify(obj);
+					var ob2 = decodeURI(ob1);
+					var obj3 = JSON.parse(ob2);
+					return obj3;
 				}
 				else{
 					currTopicLevel = obj;
@@ -52,7 +62,7 @@ function getTopicData(topicParams){
 			}
 		}
 	}
-	console.log("Item" + topicParams.toString() + "not found in data");
+	console.log("Item " + topicParams.toString() + " not found in data");
 	return {};
 }
 
