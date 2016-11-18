@@ -8,6 +8,7 @@ exports.view = function(req, res){
     var strData = JSON.stringify(data);
     console.log(strData);
     var unescData = decodeURI(strData);
+    //front page
     var finData = JSON.parse(unescData);
   	res.render('index', finData);
 };
@@ -16,6 +17,7 @@ exports.topicPath = function(req, res){
 	var topicPath = escape(req.params[0].toString());
 	var topicParams = topicPath.split('/');
 	var topicParamsStr = JSON.stringify(topicParams);
+	//the "What's up with section on top"
 	var topicParamsUnesc = unescape(topicParamsStr);
 	var topicParamsFin = JSON.parse(topicParamsUnesc);
 	var topicData = getTopicData(topicParams);
