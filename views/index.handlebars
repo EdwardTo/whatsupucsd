@@ -27,7 +27,7 @@
 						</a>
 						<div class="title">
 							<a href="{{../currTopicPath}}{{title}}">
-							<h2>{{title}}</h2>
+							<h2 id = "title">{{{title}}}</h2>
 							</a>
 							<h2>
 							<div class="modifier important">
@@ -53,8 +53,8 @@
 								<a href="{{../currTopicPath}}{{../title}}/{{title}}">
 								<div class="bg-link">
 								</div>
-								<div class="title">
-									{{title}}
+								<div class="title" id="title">
+									{{{title}}}
 								</div>
 								<span class="badge">{{modifiers.important}}</span>
 								</a>
@@ -97,4 +97,7 @@
 			</nav>
 		</div>
 	</body>
+	<script>
+		$("#title").html($("#title").html().replace(/%3F/g,'?'));
+	</script>
 </html>
