@@ -7,7 +7,7 @@ data = require('../data.json')
 exports.view = function(req, res){
     var strData = JSON.stringify(data);
     console.log(strData);
-    var unescData = unescape(strData);
+    var unescData = decodeURI(strData);
     var finData = JSON.parse(unescData);
   	res.render('index', finData);
 };
@@ -50,6 +50,7 @@ function getTopicData(topicParams){
 			//console.log("j=" + j + ", objtitle=" + obj.title);
 			if(obj.title == topicParams[i]){
 				if(i == (topicParams.length - 1)){
+					//TODO RIGHT HERE IS WHERE THE LINK AND OBJECT IS DISPLAYED
 					var ob1 = JSON.stringify(obj);
 					var ob2 = decodeURI(ob1);
 					var obj3 = JSON.parse(ob2);
