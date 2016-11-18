@@ -33,6 +33,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.get('/', index.view);
+app.get('/b', index.b);
+app.get('/b/*', index.bTopic);
+app.get('/b/');
 app.get('/index', index.view);
 app.get('/login', login.view);
 app.get('/registration', registration.view);

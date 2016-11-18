@@ -12,6 +12,29 @@ exports.view = function(req, res){
   	res.render('index', finData);
 };
 
+exports.b = function(req, res){
+	var strData = JSON.stringify(data);
+    console.log(strData);
+    var unescData = decodeURI(strData);
+    var finData = JSON.parse(unescData);
+	res.render('index2', finData);
+}
+
+exports.bTopic = function(req, res){
+	var topicPath = escape(req.params[0].toString());
+	var topicParams = topicPath.split('/');
+	var topicParamsStr = JSON.stringify(topicParams);
+	var topicParamsUnesc = unescape(topicParamsStr);
+	var topicParamsFin = JSON.parse(topicParamsUnesc);
+	var topicData = getTopicData(topicParams);
+
+	topicData['currTopicPath'] = topicPath + '/';
+	topicData['currTopicParams'] = topicParamsFin;
+	topicData['prevTopicPath'] = (topicParams.slice(0, -1)).join('/');
+	console.log("Getting Topic: " + topicParams.toString());
+	res.render('index2', topicData);
+}
+
 exports.topicPath = function(req, res){
 	var topicPath = escape(req.params[0].toString());
 	var topicParams = topicPath.split('/');
