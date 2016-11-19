@@ -18,20 +18,20 @@
 			</nav>
 		</div>
 		<div class="container" style="height:100%" align="center">
-			<div class="content">
+			<div class="content" >
 				{{#each topics}}
 					<div class="topic">
-						<a href="{{../currTopicPath}}{{title}}">
-						<div class="bg-link">
-						</div>
+						<a href="{{../currTopicPath}}{{{title}}}" >
+							<div class="bg-link">
+							</div>
 						</a>
 						<div class="title">
-							<a href="{{../currTopicPath}}{{title}}">
-							<h2 id = "title">{{{title}}}</h2>
+							<a href="{{../currTopicPath}}{{{title}}}">
+							<h2 class = "title1">{{title}}</h2>
 							</a>
 							<h2>
 							<div class="modifier important">
-								<span class="glyphicon glyphicon-check"></span> 
+								<span class="glyphicon glyphicon-plus"></span>
 								<span class="badge">{{modifiers.important}}</span>
 							</div>
 							<div class="modifier agree">
@@ -50,10 +50,10 @@
 						</div>
 						{{#each topics}}
 							<div class="subtopic">
-								<a href="{{../currTopicPath}}{{../title}}/{{title}}">
+								<a href="{{../currTopicPath}}{{../title}}/{{title}}" >
 								<div class="bg-link">
 								</div>
-								<div class="title" id="title">
+								<div class="title title1">
 									{{{title}}}
 								</div>
 								<span class="badge">{{modifiers.important}}</span>
@@ -98,6 +98,9 @@
 		</div>
 	</body>
 	<script>
-		$("#title").html($("#title").html().replace(/%3F/g,'?'));
+
+		$(".title1").each(function() {
+	  		$(this).html($(this).html().replace(/%3F/g,'?'));
+		});
 	</script>
 </html>
