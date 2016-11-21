@@ -71,6 +71,50 @@
 					]
 				}
 			]
+		},
+		{
+			"title": "UCLA",
+			"modifiers" : {
+				"important" : 9000,
+				"agree" : 44,
+				"disagree" : 1,
+				"unimportant" : 6
+			},
+			"topics": [
+			]
+		},
+		{
+			"title": "UCI",
+			"modifiers" : {
+				"important" : 9000,
+				"agree" : 44,
+				"disagree" : 1,
+				"unimportant" : 6
+			},
+			"topics": [
+			]
+		},
+		{
+			"title": "SDSU",
+			"modifiers" : {
+				"important" : 9000,
+				"agree" : 44,
+				"disagree" : 1,
+				"unimportant" : 6
+			},
+			"topics": [
+			]
+		},
+		{
+			"title": "UCSC",
+			"modifiers" : {
+				"important" : 9000,
+				"agree" : 44,
+				"disagree" : 1,
+				"unimportant" : 6
+			},
+			"topics": [
+			]
 		}
 	]
 }
