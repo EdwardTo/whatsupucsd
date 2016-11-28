@@ -1,6 +1,7 @@
 html, body{
 	height:100%;
 	width:100%;
+	background-color: 	#F0FFFF;
 }
 
 .content{
@@ -48,6 +49,8 @@ html, body{
 	-webkit-transition: width 1s, height 1s; /* Safari */
     transition: width 1s, height 1s;
     background-color: LightSteelBlue;
+    background-color:#82D3F0;
+    border-color: white;
     
 }
 
@@ -72,6 +75,7 @@ html, body{
 	width: 50px;
 	float: left;
 	clear: none;
+	color: white;
 }
 
 .modifier .badge{
@@ -132,7 +136,7 @@ html, body{
 	max-height: 100px;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #c3d0e5;
+	background-color: #1E90FF;
 	text-align:center;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -144,7 +148,7 @@ html, body{
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 	font-size:2em;
-	color:#1E90FF;
+	color:white;
 }
 
 a{
@@ -158,7 +162,9 @@ a{
 	border-radius: 10px;
 }
 
+
 .page-title{
 	line-height:150%;
 	display: block;
 }
+
