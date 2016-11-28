@@ -32,7 +32,6 @@ html, body{
 	text-align:center;
 	color:#fff;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	
 }
 
 .topic{
@@ -153,7 +152,13 @@ a{
 }
 
 .path-breadcrumbs{
-	padding: 5px;
+	padding: 3px;
+	padding-top: 0px;
 	border: 3px solid white;
 	border-radius: 10px;
+}
+
+.page-title{
+	line-height:150%;
+	display: block;
 }
