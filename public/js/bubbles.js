@@ -58,5 +58,5 @@ function modifierCallback(callbackInfo){
 }
 
 function pop(){
-	alert("This issue has popped!  Your support has been sent to the following places: ")
+	alert("This issue has popped!  Your support has been sent to the following places: UCSD Parking Administration")
 }
