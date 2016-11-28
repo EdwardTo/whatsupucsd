@@ -29,7 +29,7 @@
 	<body>
 		<div class="container" align="center">
 			<nav class="page-title-bar navbar navbar-fixed-top navbar-light bg-faded">
-				<h2>What's Up With{{#each currTopicParams}} {{this}}{{/each}}?</h2>
+				<h2>What's Up With{{#each currTopicParams}} <a href="/{{this}}"><span class="path-breadcrumbs">{{this}}</span></a>{{/each}}?</h2>
 			</nav>
 		</div>
 		<div class="container" style="height:100%" align="center">
