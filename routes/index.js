@@ -49,6 +49,9 @@ exports.topicPath = function(req, res){
 	topicData['currTopicParams'] = topicParamsFin;
 	topicData['prevTopicPath'] = '/' + (topicParams.slice(0, -1)).join('/');
 	console.log("Getting Topic: " + topicParams.toString());
+	console.log("currTopicPath:" + topicData['currTopicPath']);
+	console.log("currTopicParams:" + topicData['currTopicParams']);
+	console.log("prevTopicPath:") + topicData['prevTopicPath'];
 	res.render('index', topicData);
 }
 
